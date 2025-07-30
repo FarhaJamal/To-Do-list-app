@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="icon" type="icon" href="images/empty.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="todo">
+            <h1>To-Do App</h1>
+            <div class="stat-con">
+                <div class="details">
+                    <h3 id="progress-message">Keep Going!</h3>
+                    <div id="progressbar">
+                        <div id="progress"></div>
+                    </div>
+                </div>
+                <div class="ststs-num">
+                    <p id="numbers">0 / 0</p>
+                </div>
+            </div>
+            <form class="inputs">
+                <input type="text" id="task" placeholder="Add your new task...">
+                <button type="submit" id="submit">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </form>
+            <div class="todo-con">
+                <ul id="task-list"></ul>
+                <img class="empty-image" src="images/empty.png" alt="empty">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,263 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: "Oswald", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(./images/background.jpg) no-repeat center center/cover;
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+}
+.todo
+{
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    color: whitesmoke;
+    border-radius: 20px;
+    box-shadow: 0 0 100px /*rgba(0, 0, 0, 0.5)*/;
+    border: 3px solid rgba(255,255,255, 0.18);
+    backdrop-filter: blur(10px);
+}
+.todo h1{
+    font-size: 2rem;
+}
+.stat-con
+{
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(255,255,255, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+.details
+{
+    width: 100%;
+}
+.details h3
+{
+    color: whitesmoke;
+}
+#progressbar
+{
+    width: 100%;
+    height: 7px;
+    background: rgba(255,255,255, 0.18);
+    border-radius: 20px;
+    position: relative;
+    margin-top: 15px;
+}
+#progress
+{
+    width: 50%;
+    height: 100%;
+    background: rgb(50, 57, 83);
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+#numbers
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background: rgb(50, 57, 83);
+    border: 2px solid rgba(255,255,255, 0.18);
+    font-weight: bold;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+.inputs
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.inputs input
+{
+    flex: 1;
+    padding: 10px 17px;
+    font-size: 1.1 rem;
+    border: none;
+    outline: none;
+    border-radius: 22px;
+    background: rgba(255,255,255, 0.18);
+    color: whitesmoke;
+}
+.inputs input::placeholder
+{
+    color: whitesmoke;
+}
+.inputs button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    padding: 8px;
+    border-radius: 50%;
+    color: whitesmoke;
+    font-size: 1.1 rem;
+    background: rgba(255,255,255, 0.18);
+    border: 2px solid rgba(255,255,255, 0.18);
+    cursor: pointer;
+    transition: all 0,2s ease;
+}
+.inputs button:hover
+{
+    transform: scale(1.1);
+    background: rgb(50, 57, 83);
+}
+.todo-con
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#task-list
+{
+    width: 100%;
+}
+.empty-image
+{
+    width: 100%;
+}
+#task-list li
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255, 0.18);
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    border-radius: 30px;
+    font-size: 1,2rem;
+    color: whitesmoke;
+    position: relative;
+    transition: box-shadow 0.2s ease;
+}
+#task-list li:hover
+{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#task-list li .checkbox
+{
+    min-width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255,255,255, 0.18);
+    background: transparent;
+    border-radius: 50%;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+#task-list li .checkbox:checked
+{
+    background: rgb(50, 57, 83);
+    transform: scale(1.1);
+}
+#task-list li .checkbox:checked::before
+{
+    content: "\2713";
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+#task-list li span
+{
+    flex: 1;
+    margin-left: 10px;
+    word-wrap: break-word;
+}
+#task-list li.completed span
+{
+    text-decoration: 2px line-through black;
+    color: black;
+}
+.task-buttons
+{
+    display: flex;
+    gap: 10px;
+    margin-right: auto;
+}
+.task-buttons button
+{
+    background: rgba(255,255,255, 0.18);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: whitesmoke;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.task-buttons button:hover
+{
+    transform: scale(1.2);
+}
+.task-buttons .edit-btn
+{
+    background: rgb(148, 166, 202);
+}
+.task-buttons .delete-btn
+{
+    background: rgb(50, 57, 83);
+}
+
+@media (max-width: 600px)
+{
+    .container
+    {
+        margin: 0 20px;
+        padding: 0 10px;
+    }
+    .todo
+    {
+        padding: 1.5rem;
+        gap: 20px;
+    }
+    #numbers
+    {
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+    }
+    .inputs .inputs{
+        font-size: 1rem;
+    }
+    #task-list li
+    {
+        font-size: 1rem;
+    }
+}
